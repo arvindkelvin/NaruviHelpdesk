@@ -1,6 +1,6 @@
 <?php
 $title=($cfg && is_object($cfg) && $cfg->getTitle())
-    ? $cfg->getTitle() : 'osTicket :: '.__('Support Ticket System');
+    ? $cfg->getTitle() : 'Naruvi Helpdesk :: '.__('Support Ticket System');
 $signin_url = ROOT_PATH . "login.php"
     . ($thisclient ? "?e=".urlencode($thisclient->getEmail()) : "");
 $signout_url = ROOT_PATH . "logout.php?auth=".$ost->getLinkToken();
@@ -26,14 +26,14 @@ if ($lang) {
 
 // Dropped IE Support Warning
 if (osTicket::is_ie())
-    $ost->setWarning(__('osTicket no longer supports Internet Explorer.'));
+    $ost->setWarning(__('Naruvi Helpdesk no longer supports Internet Explorer.'));
 ?>>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title><?php echo Format::htmlchars($title); ?></title>
     <meta name="description" content="customer support platform">
-    <meta name="keywords" content="osTicket, Customer support system, support ticket system">
+    <meta name="keywords" content="Naruvi IT, Customer support system, support ticket system">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="<?php echo ROOT_PATH; ?>css/osticket.css" media="screen">
     <link rel="stylesheet" href="<?php echo ASSETS_PATH; ?>css/theme.css" media="screen">
