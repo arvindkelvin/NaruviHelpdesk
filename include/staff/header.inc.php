@@ -3,7 +3,7 @@ header("Content-Type: text/html; charset=UTF-8");
 header("Content-Security-Policy: frame-ancestors ".$cfg->getAllowIframes()."; script-src 'self' 'unsafe-inline' 'unsafe-eval'; object-src 'none'");
 
 $title = ($ost && ($title=$ost->getPageTitle()))
-    ? $title : ('osTicket :: '.__('Staff Control Panel'));
+    ? $title : ('Naruvi IT :: '.__('Staff Control Panel'));
 
 if (!isset($_SERVER['HTTP_X_PJAX'])) { ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
@@ -18,7 +18,7 @@ if ($lang) {
 
 // Dropped IE Support Warning
 if (osTicket::is_ie())
-    $ost->setWarning(__('osTicket no longer supports Internet Explorer.'));
+    $ost->setWarning(__('Naruvi Helpdesk no longer supports Internet Explorer.'));
 ?>>
 <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
@@ -98,7 +98,7 @@ if (osTicket::is_ie())
         if (strpos($h, '<script ') !== false)
             echo $h;
     } ?>
-    <title><?php echo ($ost && ($title=$ost->getPageTitle()))?$title:'osTicket :: '.__('Staff Control Panel'); ?></title><?php
+    <title><?php echo ($ost && ($title=$ost->getPageTitle()))?$title:'Naruvi Helpdesk :: '.__('Staff Control Panel'); ?></title><?php
 } # endif X_PJAX ?>
     <ul id="nav">
 <?php include STAFFINC_DIR . "templates/navigation.tmpl.php"; ?>
